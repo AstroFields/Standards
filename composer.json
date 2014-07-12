@@ -1,0 +1,26 @@
+{
+    "name"        : "wcm/astrofields-standards",
+    "description" : "Standards Extension for the AstroFields framework",
+    "keywords"    : [ "wordpress", "forms", "fields" ],
+    "homepage"    : "https://github.com/AstroFields/Standards",
+    "license"     : "MIT",
+    "authors"     : [
+        {
+            "name"  : "Kaiser Franz Josef",
+            "email" : "wecodemore@gmail.com"
+        }
+    ],
+    "support"     : {
+        "issues" : "https://github.com/AstroFields/Standards/issues"
+    },
+    "minimum-stability" : "stable",
+    "require"     : {
+        "php"             : ">=5.3",
+        "wcm/astrofields" : "*"
+    },
+    "autoload"    : {
+        "psr-4" : {
+            "WCM\\AstroFields\\" : "src\\"
+        }
+    }
+}
