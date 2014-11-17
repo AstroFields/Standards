@@ -1,5 +1,5 @@
 {
-    "name"        : "WCM/AstroFields/Standards",
+    "name"        : "wecodemore/astrofields-standards",
     "version"     : "0.1.0-alpha1",
     "description" : "Standards Extension for the AstroFields framework",
     "keywords"    : [ "wordpress", "forms", "fields" ],
