@@ -2,19 +2,18 @@
 
 namespace WCM\AstroFields\Standards\Templates;
 
-use WCM\AstroFields\Core\Templates\TemplateInterface,
-	WCM\AstroFields\Core\Templates\PrintableInterface,
-	WCM\AstroFields\Core\Receivers\FieldInterface,
-	WCM\AstroFields\Core\Receivers\OptionAwareInterface,
-	WCM\AstroFields\Core\Receivers\AttributeAwareInterface;
+use WCM\AstroFields\Core\Templates;
+use WCM\AstroFields\Core\Receivers;
 
-class SelectFieldTmpl implements TemplateInterface, PrintableInterface
+class SelectFieldTmpl implements
+	Templates\TemplateInterface,
+	Templates\PrintableInterface
 {
-	/** @type OptionAwareInterface|AttributeAwareInterface */
+	/** @type Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface */
 	private $data;
 
 	/**
-	 * @param OptionAwareInterface|AttributeAwareInterface $data
+	 * @param Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )
@@ -52,10 +51,11 @@ class SelectFieldTmpl implements TemplateInterface, PrintableInterface
 		foreach ( $options as $val => $label )
 		{
 			$markup .= sprintf(
-				'<option value="%s" %s %s>%s</option>',
+				'<option value="%s"%s %s%s>%s</option>',
 				$val,
 				$this->data->getAttributes(),
 				selected( $current, $val, false ),
+				empty( $val ) ? ' disabled' : '',
 				$label
 			);
 		}

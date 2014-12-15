@@ -2,14 +2,14 @@
 
 namespace WCM\AstroFields\Standards\Templates;
 
-use WCM\AstroFields\Core\Templates\TemplateInterface,
-	WCM\AstroFields\Core\Templates\PrintableInterface,
-	WCM\AstroFields\Core\Receivers\AttributeAwareInterface,
-	WCM\AstroFields\Core\Receivers\FieldInterface;
+use WCM\AstroFields\Core\Templates;
+use WCM\AstroFields\Core\Receivers;
 
-class PasswordFieldTmpl implements TemplateInterface, PrintableInterface
+class PasswordFieldTmpl implements
+	Templates\TemplateInterface,
+	Templates\PrintableInterface
 {
-	/** @type AttributeAwareInterface */
+	/** @type Receivers\AttributeAwareInterface */
 	private $data;
 
 	public function attach( $data )

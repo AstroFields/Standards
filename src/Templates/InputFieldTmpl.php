@@ -2,18 +2,18 @@
 
 namespace WCM\AstroFields\Standards\Templates;
 
-use WCM\AstroFields\Core\Templates\TemplateInterface,
-	WCM\AstroFields\Core\Templates\PrintableInterface,
-	WCM\AstroFields\Core\Receivers\FieldInterface,
-	WCM\AstroFields\Core\Receivers\AttributeAwareInterface;
+use WCM\AstroFields\Core\Templates;
+use WCM\AstroFields\Core\Receivers;
 
-class InputFieldTmpl implements TemplateInterface, PrintableInterface
+class InputFieldTmpl implements
+	Templates\TemplateInterface,
+	Templates\PrintableInterface
 {
-	/** @type AttributeAwareInterface */
+	/** @type Receivers\AttributeAwareInterface */
 	protected $data;
 
 	/**
-	 * @param FieldInterface $data
+	 * @param Receivers\EntityProviderInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )

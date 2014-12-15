@@ -2,17 +2,18 @@
 
 namespace WCM\AstroFields\Standards\Templates;
 
-use WCM\AstroFields\Core\Templates\TemplateInterface,
-	WCM\AstroFields\Core\Templates\PrintableInterface,
-	WCM\AstroFields\Core\Receivers\AttributeAwareInterface;
+use WCM\AstroFields\Core\Templates;
+use WCM\AstroFields\Core\Receivers;
 
-class TextareaFieldTmpl implements TemplateInterface, PrintableInterface
+class TextareaFieldTmpl implements
+	Templates\TemplateInterface,
+	Templates\PrintableInterface
 {
-	/** @type AttributeAwareInterface */
+	/** @type Receivers\AttributeAwareInterface */
 	private $data;
 
 	/**
-	 * @param AttributeAwareInterface $data
+	 * @param Receivers\AttributeAwareInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )
@@ -45,8 +46,7 @@ class TextareaFieldTmpl implements TemplateInterface, PrintableInterface
 	public function getMarkUp()
 	{
 		return sprintf(
-			'<textarea name="%s" value="%s" %s>%s</textarea>',
-			$this->data->getKey(),
+			'<textarea name="%s" %s>%s</textarea>',
 			$this->data->getKey(),
 			$this->data->getAttributes(),
 			$this->data->getValue()

@@ -2,15 +2,14 @@
 
 namespace WCM\AstroFields\Standards\Templates;
 
-use WCM\AstroFields\Core\Templates\TemplateInterface,
-	WCM\AstroFields\Core\Templates\PrintableInterface,
-	WCM\AstroFields\Core\Receivers\FieldInterface,
-	WCM\AstroFields\Core\Receivers\OptionAwareInterface,
-	WCM\AstroFields\Core\Receivers\AttributeAwareInterface;
+use WCM\AstroFields\Core\Templates;
+use WCM\AstroFields\Core\Receivers;
 
-class CheckboxListTmpl implements TemplateInterface, PrintableInterface
+class CheckboxListTmpl implements
+	Templates\TemplateInterface,
+	Templates\PrintableInterface
 {
-	/** @type OptionAwareInterface|AttributeAwareInterface */
+	/** @type Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface */
 	private $data;
 
 	public function attach( $data )
