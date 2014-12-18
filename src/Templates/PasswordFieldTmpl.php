@@ -3,13 +3,13 @@
 namespace WCM\AstroFields\Standards\Templates;
 
 use WCM\AstroFields\Core\Templates;
-use WCM\AstroFields\Core\Receivers;
+use WCM\AstroFields\Core\Providers;
 
 class PasswordFieldTmpl implements
 	Templates\TemplateInterface,
 	Templates\PrintableInterface
 {
-	/** @type Receivers\AttributeAwareInterface */
+	/** @type Providers\AttributeAwareInterface */
 	private $data;
 
 	public function attach( $data )

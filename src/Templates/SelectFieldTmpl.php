@@ -3,17 +3,17 @@
 namespace WCM\AstroFields\Standards\Templates;
 
 use WCM\AstroFields\Core\Templates;
-use WCM\AstroFields\Core\Receivers;
+use WCM\AstroFields\Core\Providers;
 
 class SelectFieldTmpl implements
 	Templates\TemplateInterface,
 	Templates\PrintableInterface
 {
-	/** @type Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface */
+	/** @type Providers\OptionAwareInterface | Providers\AttributeAwareInterface */
 	private $data;
 
 	/**
-	 * @param Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface $data
+	 * @param Providers\OptionAwareInterface | Providers\AttributeAwareInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )

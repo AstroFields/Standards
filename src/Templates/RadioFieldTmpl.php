@@ -3,13 +3,13 @@
 namespace WCM\AstroFields\Standards\Templates;
 
 use WCM\AstroFields\Core\Templates;
-use WCM\AstroFields\Core\Receivers;
+use WCM\AstroFields\Core\Providers;
 
 class RadioFieldTmpl implements
 	Templates\TemplateInterface,
 	Templates\PrintableInterface
 {
-	/** @type Receivers\OptionAwareInterface | Receivers\AttributeAwareInterface */
+	/** @type Providers\OptionAwareInterface | Providers\AttributeAwareInterface */
 	private $data;
 
 	/**

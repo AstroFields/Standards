@@ -3,17 +3,17 @@
 namespace WCM\AstroFields\Standards\Templates;
 
 use WCM\AstroFields\Core\Templates;
-use WCM\AstroFields\Core\Receivers;
+use WCM\AstroFields\Core\Providers;
 
 class CheckboxFieldTmpl implements
 	Templates\TemplateInterface,
 	Templates\PrintableInterface
 {
-	/** @type Receivers\AttributeAwareInterface */
+	/** @type Providers\AttributeAwareInterface */
 	private $data;
 
 	/**
-	 * @param Receivers\AttributeAwareInterface $data
+	 * @param Providers\AttributeAwareInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )

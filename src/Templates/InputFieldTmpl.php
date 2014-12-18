@@ -3,17 +3,17 @@
 namespace WCM\AstroFields\Standards\Templates;
 
 use WCM\AstroFields\Core\Templates;
-use WCM\AstroFields\Core\Receivers;
+use WCM\AstroFields\Core\Providers;
 
 class InputFieldTmpl implements
 	Templates\TemplateInterface,
 	Templates\PrintableInterface
 {
-	/** @type Receivers\AttributeAwareInterface */
+	/** @type Providers\AttributeAwareInterface */
 	protected $data;
 
 	/**
-	 * @param Receivers\EntityProviderInterface $data
+	 * @param Providers\EntityProviderInterface $data
 	 * @return $this
 	 */
 	public function attach( $data )
